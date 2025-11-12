@@ -20,7 +20,7 @@
         <nav class="container mx-auto">
             <ul class="flex justify-around">
                 <li>
-                    <a href="#" class="text-white hover:text-red-400 font-semibold">Responsable Inspection</a>
+                    <a href="{{ url('index') }}" class="text-white hover:text-red-400 font-semibold">Responsable Inspection</a>
                 </li>
             </ul>
         </nav>

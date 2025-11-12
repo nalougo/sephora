@@ -7,6 +7,7 @@ use App\Http\controllers\Auth\connexioncontroller;
 use App\Http\Controllers\Auth\indexcontroller;
 use App\Http\Controllers\planningcontroller;
 use App\Http\Controllers\planningcontroller as ControllersPlanningcontroller;
+use App\Http\Controllers\singlecontroller;
 use App\Http\Controllers\sousAdmine\filmcontroller;
 use App\Http\Controllers\sousAdmine\formproducteur;
 use App\Http\Controllers\sousAdmine\formprojection;
@@ -87,4 +88,8 @@ route::get('/formutilisateur',[formutilisateurcontroller::class,'utilise'])->nam
 
 
 Route::post('/utilisateurs', [formutilisateurcontroller::class, 'store'])->name('utilisateurs.store');
+
+Route::get('/single', [SingleController::class, 'index'])->name('single');
+Route::get('/single', [SingleController::class, 'show']);
+Route::get('/film/{id}', [SingleController::class, 'show'])->name('film.show');
 

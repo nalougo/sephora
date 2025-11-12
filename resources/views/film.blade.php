@@ -25,20 +25,16 @@
     </header>
 
     <main class="container mx-auto py-10 flex-grow">
-        <!-- Conteneur grille avec un espacement entre les cartes -->
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div class="grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-5 gap-8">
             @foreach($projections as $projection)
-            <div class="bg-gray-800 rounded-lg shadow-lg flex h-[320px] w-[450px] overflow-hidden">
-                <img src="{{ asset('storage/' . $projection->image) }}" alt="Image {{ $projection->film->titre }}" class="w-1/2 object-cover">
-                <div class="p-4 w-1/2 flex flex-col justify-center">
-                    <h2 class="text-lg font-bold text-[#FF7F00]">{{ $projection->film->titre }}</h2>
-                    <p class="text-gray-400 mt-2"><strong>Sujet :</strong> {{ $projection->film->sujet }}</p>
-                    <p class="text-gray-400 mt-2"><strong>Date de projection :</strong> {{ $projection->date }}</p>
-                    <p class="text-gray-400 mt-2"><strong>Heure de projection :</strong> {{ $projection->heure }}</p>
-                    <p class="text-gray-400 mt-2"><strong>Lieu :</strong> {{ $projection->lieu }}</p>
-                    <p class="text-gray-400 mt-2"><strong>Réalisateur :</strong> {{ $projection->film->realisateur->nom }} {{ $projection->film->realisateur->prenom }}</p>
-                    <p class="text-gray-400 mt-2"><strong>Producteur :</strong> {{ $projection->film->producteur->nom }} {{ $projection->film->producteur->prenom }}</p>
-                </div>
+            <div class="flex justify-center">
+                <a href="{{ route('film.show', $projection->id) }}" class="block">
+                    <img
+                        src="{{ asset('storage/' . $projection->image) }}"
+                        alt="Image {{ $projection->film->titre }}"
+                        class="w-[225px] h-[320px] object-cover rounded-lg shadow-lg transition-transform transform hover:scale-105 duration-300"
+                    />
+                </a>
             </div>
             @endforeach
         </div>

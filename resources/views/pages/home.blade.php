@@ -22,7 +22,6 @@
                     <a href="{{ url('planning') }}" class="text-white text-lg py-3 px-6 rounded-full hover:text-red-500 transition">Films</a>
                     <a href="{{ route('connecter') }}" class="text-white text-lg py-3 px-6 rounded-full hover:text-red-500 transition">Se connecter</a>
                     <a href="{{ route('register') }}" class="text-white text-lg py-3 px-6 rounded-full hover:text-red-500 transition">S'inscrire</a>
-                    <a href="{{ url('apropos') }}" class="text-white text-lg py-3 px-6 rounded-full hover:text-red-500 transition">A propos</a>
                 </strong>
             </div>
         </nav>

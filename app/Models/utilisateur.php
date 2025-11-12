@@ -30,5 +30,7 @@ class utilisateur extends Authenticatable
     {
         return 'nom_utilisateur';
     }
-    
+
+ 
+
 }

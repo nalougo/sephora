@@ -21,4 +21,5 @@ class projections extends Model
     {
         return $this->hasMany(projections::class, 'code_film');
     }
+
 }
